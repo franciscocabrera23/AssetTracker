@@ -20,6 +20,8 @@ class AssetTracker {
     readY(void),
     readZ(void),
     readXYZmagnitude(void);
+  uint8_t 
+      getOrientation(void);
   float
     readLat(void),
     readLon(void);
@@ -462,7 +464,7 @@ class Adafruit_LIS3DH : public Adafruit_Sensor {
   bool getEvent(sensors_event_t *event);
   void getSensor(sensor_t *sensor);
 
-  uint8_t getOrientation(void);
+
 
   int16_t x, y, z;
   float x_g, y_g, z_g;
